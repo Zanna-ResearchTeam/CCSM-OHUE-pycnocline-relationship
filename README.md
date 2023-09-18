@@ -13,9 +13,9 @@ The first two notebooks are included to show you how I cleaned up and saved the 
 
 **heatflux_SST_TAS.ipynb** reads in and calculates all surface fields used to calculate our metrics. Those are the time-averaged ocean heat flux anomaly, sea-surface temperature anomaly, and surface temperature anomaly (currently not used in the paper nor available in MITGCM I think)? Output is saved as OHU_change_cmip5.nc, OHU_change_cmip6.nc, SST_change_cmip5.nc, SST_change_cmip6.nc, and TAS_change_cmip5.nc, TAS_change_cmip6.nc
 
-The above codes use a large amount of raw cmip data that I haven't uploaded because it's so much data. I have instead included the outputs, but can upload raw data if needed. I also expect that the above codes will have to differ for the MITGCM data since you aren't reading in data from different models. They are instead meant to show you how all fields are calculated from the raw interior and surface fields.
+Raw CMIP data (used in the Density_stratifacation_slope.ipynb, heatflux_SST_TAS.ipynb) is available for download at https://esgf-node.llnl.gov/search/cmip6/ and https://esgf-node.llnl.gov/search/cmip5/, respectively
 
-Lastly, **Plot_metrics.ipynb** reads in all output from the above two notebooks to calculate all the metrics used in the scatter plots of figures 2 and 3 in the paper. To do so, we calculate the global and regional OHUE values, the normalized density metric, and the Southern-Ocean averaged N2 and isopycnal slope. Data is plotted for $OHUE$ and $OHUE_{midlats}$ versus $N^2$, pycnocline depth, and isopycnal slope. 
+Lastly, **Plot_metrics_GRL.ipynb** reads in all output from the above two notebooks to calculate all the metrics cited in the paper. To do so, we calculate the global and regional OHUE values, the normalized density metric, and the Southern-Ocean averaged N2 and isopycnal slope. Included is also code to test the sentitivity of the OHUE-pycnocline relationship for several other pycnocline metrics.
 
 
 
